@@ -156,8 +156,8 @@ class SeedsModal extends Component {
         //preamble = efficiency < 0.5 ? "Add to " : "Remove From";
         preamble = selectedAction > 0 ? "Add to " : "Remove From";
         parsedEfficiency = parseInt(efficiency*100);
-    }
-    finalList = (<p style={{textAlign:"center", fontStyle: "italic"}}>There are no suggestions available.</p>);
+    }else
+        finalList = (<p style={{textAlign:"center", fontStyle: "italic"}}>There are no suggestions available.</p>);
 
     return(
             <Modal 

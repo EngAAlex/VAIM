@@ -1,6 +1,8 @@
 # VAIM Supplemental material
 
-This code is supplied as supplementary material for the TVCG paper submission "Influence Maximization with Visual Analytics". 
+This code is supplied as supplementary material for the TVCG paper submission "Influence Maximization with Visual Analytics". To know more, please check the [YouTube video](https://www.youtube.com/watch?v=LW3P4JCTDIM&t=4s).
+
+Link to preprint coming soon!
 
 The system is divided into two folders: client and server; the server folder also contains a sample database dump (containing sample graphs plus the graphs used in the case studies illustrated in the paper). Each folder contains a separate Readme file with building and running details.
 
