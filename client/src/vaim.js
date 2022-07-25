@@ -42,7 +42,7 @@ import SimulationControlComponent from './panels/SimulationControl';
 import ResolutionSliderComponent from './panels/resolutionSlider';
 import {getSuffixString} from "./utils/utils";
 
-const CURR_VERSION = "040422A";
+const CURR_VERSION = "250722A";
 
 const AVAILABLE_MODELS = [
     {key: "IndependentCascadeModel", readable: "Independent Cascade"},
