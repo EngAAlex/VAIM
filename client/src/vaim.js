@@ -598,9 +598,9 @@ class Vaim extends Component{
                                 and the larger portions of them you load into the node-link view might cause longer waiting times. Finally, 
                                 please allow for a few minutes when computing simulations with many seeds and/or on larger graphs. If you find the
                                 dashboard too "crowded" (possibly due to a low dpi screen) try to lower the zoom of the window until you see
-                                all the elements properly arranged.
+                                all the elements properly arranged - and reload the page.
                             </p>
-                            <p>Source code and other material available for download are available <a href="/downloads">here.</a></p>
+                            <p>Please  check <a href="https://github.com/EngAAlex/VAIM" target="_blank">VAIM project GitHub page</a> for more information, downloadable material, and links to the open-access paper.</p>
                             <p>Thank you for your time exploring VAIM!</p>
                             <p style={{fontStyle: "italic"}}>Yours sincerely,<br />VAIM Authors</p>
                         </div>
