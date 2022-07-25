@@ -590,9 +590,11 @@ class Vaim extends Component{
                     title={"Welcome to VAIM!"}
                     message={(
                         <div>
-                            <p>Welcome to the live demo of VAIM!</p>
-                            <p>This demo is supplemental material to the IEEE TVCG paper resubmission.</p>
-                            <p>Please refer to the paper and watch the supplemental video for the instructions on how to use the system.</p>
+                            <p>Welcome to VAIM!</p>
+                            <p>This code is supplemental material to the <a href="https://www.computer.org/csdl/journal/tg/5555/01/09829321/1EYxoEPe9eU" target="_blank">IEEE TVCG</a> paper.</p>                            
+                            <p>Please  check <a href="https://github.com/EngAAlex/VAIM" target="_blank">VAIM project GitHub page</a> for more information, supplemental video with usage description, and more downloadable material.</p>
+                            <p>Thank you for your time exploring VAIM!</p>
+                            <p style={{fontStyle: "italic"}}>Yours sincerely,<br />VAIM Authors</p>
                             <p>DISCLAIMER: The performance of the system depends on the resolution of your monitor 
                                 (recommended 1080p), your computer specifications, and network speed. The larger the graphs you load, 
                                 and the larger portions of them you load into the node-link view might cause longer waiting times. Finally, 
@@ -600,9 +602,6 @@ class Vaim extends Component{
                                 dashboard too "crowded" (possibly due to a low dpi screen) try to lower the zoom of the window until you see
                                 all the elements properly arranged - and reload the page.
                             </p>
-                            <p>Please  check <a href="https://github.com/EngAAlex/VAIM" target="_blank">VAIM project GitHub page</a> for more information, downloadable material, and links to the open-access paper.</p>
-                            <p>Thank you for your time exploring VAIM!</p>
-                            <p style={{fontStyle: "italic"}}>Yours sincerely,<br />VAIM Authors</p>
                         </div>
                     )}
                     onClose={() => this.setState({...this.state, firstRun: false})}
