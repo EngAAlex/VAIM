@@ -109,7 +109,7 @@ class MessageModal extends Component{
                 <Paper className={classes.modalHeader}>
                         <Typography variant="h6" className={classes.sectorTitle} id="welcome-title">{title}</Typography>
                 </Paper>
-                <Typography className={classes.sectorHeading} id="welcome-description">
+                <Typography component={'span'} className={classes.sectorHeading} id="welcome-description">
                     {message}
                 </Typography>  
                 <div className={classes.buttonBar}>
