@@ -412,13 +412,13 @@ public class GraphSector   {
 				}
 
 				Map<Integer, Double> frameMap = activeVerticesMap.get(target);
-				Map<Integer, Integer> countFrameMap = activeVerticesMapFramesCount.get(target);
+				//Map<Integer, Integer> countFrameMap = activeVerticesMapFramesCount.get(target);
 				if(!frameMap.containsKey(frame)) {
 					frameMap.put(frame, edgeWeight);
-					countFrameMap.put(frame, 1);
+					//countFrameMap.put(frame, 1);
 				}else{
-					countFrameMap.put(frame, countFrameMap.get(frame) + 1);
-					frameMap.put(frame, (frameMap.get(frame) + edgeWeight)/countFrameMap.get(frame));					
+					//countFrameMap.put(frame, countFrameMap.get(frame) + 1);
+					frameMap.put(frame, (frameMap.get(frame) + edgeWeight));//countFrameMap.get(frame));					
 				}
 
 				//activeVerticesMap.put(rs.getLong(2), new Long[]{(long) frame, rs.getLong(4)});
