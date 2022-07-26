@@ -22,9 +22,11 @@ System as been tested on __Windows 10 & 11__ and __Ubuntu 22.04__, but should be
 
 ## Installation and available Scripts
 
-Detailed information about the installation of both server and client are available on the respective folders. However, a script for a complete default installation is available for Linux in the ```scripts``` folder of this repository. This installs all the required packages and sets up the database. For Windows, the steps are the same, but dependencies need to be individually installed using msi packages or portable installations, making it very difficult to provide an automated installation script.
+Detailed information about the installation of both server and client are available on the respective folders. However, a script for a complete default installation ```VAIM_install.sh``` is available for Linux in the ```scripts``` folder of this repository. This installs all the required packages and sets up the database. To run it, navigate to the ```scripts``` folder and run it as ```sh VAIM_install.sh```. Sudo access will be requested. 
 
-Once installation is complete, navigate to the script folder of VAIM and run ```VAIM_start.sh``` script on Linux or ```VAIM_start.bat``` on Windows or run the client and server independently with the instructions in the readme files of their respective folders.
+For Windows, dependencies need to be individually installed using msi packages or portable installations, making it very difficult to provide an automated installation script. After dependencies have been installed, please refer to the individual server and client readmes to complete the installation.
+
+Once installation is complete, navigate to the ```scripts``` folder of VAIM and run ```VAIM_start.sh``` script on Linux or ```VAIM_start.bat``` on Windows or run the client and server independently with the instructions in the readme files in their respective folders.
 
 ## Live Demo
 
