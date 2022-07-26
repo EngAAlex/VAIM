@@ -4,6 +4,8 @@ This code is supplied as supplementary material for the TVCG paper submission "I
 
 Paper is published as gold open access, and is available on [IEEE Xplore](https://www.computer.org/csdl/journal/tg/5555/01/09829321/1EYxoEPe9eU).
 
+Please check the [Youtube](https://www.youtube.com/watch?v=LW3P4JCTDIM) video where the features of the system are shown and commented. 
+
 ## System Architecture
 
 VAIM is a client-server application supported by a graph database (Neo4J). The repository has therefore two folders: one with usage and building details for the server and one for the client.
@@ -31,10 +33,6 @@ Detailed information about the installation of both server and client are availa
 For Windows, dependencies need to be individually installed using msi packages or portable installations, making it very difficult to provide an automated installation script. After dependencies have been installed, please refer to the individual server and client readmes to complete the installation.
 
 Once installation is complete, navigate to the ```scripts``` folder of VAIM and run ```VAIM_start.sh``` script on Linux or ```VAIM_start.bat``` on Windows or run the client and server independently with the instructions in the readme files in their respective folders.
-
-## Live Demo
-
-A live demo of the system can be accessed [here](http://vaim.cvast.tuwien.ac.at).
 
 # License
 
