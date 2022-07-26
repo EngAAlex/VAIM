@@ -1,24 +1,23 @@
 # VAIM Server source code
 
-This code is supplied as supplementary material for the TVCG paper submission "Influence Maximization with Visual Analytics". What follows is the README file of the server code.
-
-## Overview  
 VAIM application server is responsible for parsing the new graph files, interact with the database, and respond to the client queries.
 
 ### Requirements
 
-* Maven and Java software (version 14) 
-* Neo4J server running 
+* Maven and Java software (version >=11) 
+* Neo4J server running - please refer to the [official documentation](https://neo4j.com/docs/operations-manual/current/installation/) to do so
 * [GraphVIZ](https://graphviz.org/) library for creating layouts - optional.
 
 ### Build
 
-Before building, modify the "application.properties" function to match your Neo4J configuration and GraphVIZ configuration. VAIM looks for the SFDP GraphVIZ function from the command line. The default is "wsl sfdp", meaning that GraphVIZ is run on the Windows Subsystem for Linux. Remove "wsl" if you run it from PATH.
+In the following, command line statements work interchangeably on both Windows and Linux unless explicitly stated otherwise. They also assume the working directory to be ```/path/to/VAIM/server```.
 
-To build it, get into the root folder of the project and type the following:
+Before building, modify the ```application.properties``` file to match your Neo4J configuration and GraphVIZ configuration. VAIM looks for the SFDP GraphVIZ function from the command line. The default is "sfdp", meaning that GraphVIZ is run from PATH.  These configurations are not necessary if you installed VAIM using the installation script.
+
+To build it, get into the server folder of the repository and type the following:
 
 ```
-$ mvn clean package -DskipTests
+mvn clean package -DskipTests
 ```
 
 It might take a few minutes, depending on the network speed and computer capabilities.
@@ -27,7 +26,11 @@ The server will be packaged in the newly created "target" folder as "vaim-1.0.0.
 
 ### Database restore (optional)
 
-The available dumps can be restored to make use of the system right away. Otherwise, a clean database will be created automatically. 
+The available dumps can be restored to make use of the system right away. Otherwise, a clean database will be created automatically. To restore a dump, according to Neo4J documentation, use the following (with administrator priviledges):
+
+```neo4j-admin load --force --database=neo4j --from=dumps/livedemodump.dump```
+
+Please note that the existing database will be wiped out. You might want to dump the existing database for backup following the [official documentation](https://neo4j.com/docs/operations-manual/current/backup-restore/offline-backup/).
 
 ### Start-up
 
@@ -36,7 +39,7 @@ First, make sure that the Neo4J server is up and running.
 To start the server is sufficient to run the following:
 
 ```
-$ java -jar vaim-1.0.0.jar
+java -jar target/vaim-1.0.0.jar
 ```
 
 ### New Graph Load
@@ -44,14 +47,14 @@ $ java -jar vaim-1.0.0.jar
 To load a new graph in the system, run the following:
 
 ```
-$ java -jar vaim-1.0.0.jar -f <path to folder with GML files> [--redraw]
+java -jar target/vaim-1.0.0.jar -f <path to folder with GML files> [--redraw]
 ```
 
-The system will load all the files in the specified folder in sequence, but it will not go recursively if other folders are present. At the moment of writing, the system only accepts GML files. The command can be launched with the server either running or not. Database server must be running.
+The system will load all the files in the specified folder in sequence, but it will not go recursively if other folders are present. At the moment of writing, the system only accepts GML files. The command can be launched with the server either running or not. Database server on the other hand **must** be running.
 
-Use the ``--redraw`` flag to compute a layout at the moment the system is loaded. 
+Use the ```--redraw``` flag to compute a layout at the moment the system is loaded. Otherwise, the node coordinates indicated in the GML file will be used. 
 
-**IMPORTANT**: the system presumes the input graph to be directed, otherwise edge direction will be randomized.
+**IMPORTANT**: the system presumes the input graph to be directed, otherwise edge direction will be randomized. The operation might take a while, especially on larger graphs.
 
 ### Known Issues
 
