@@ -12,7 +12,7 @@ VAIM is a client-server application supported by a graph database (Neo4J). The r
 
 VAIM uses software that is available on all the three major operating systems, specifically:
 
-* [GIT](https://git-scm.com/) for downloading the code
+* [GIT](https://git-scm.com/) and [GIT-LFS](https://git-lfs.github.com/) for downloading the code and data
 * [Neo4J](https://neo4j.com/) graph database
 * [NPM](https://www.npmjs.com/) javascript package manager for the client
 * [OpenJDK](https://openjdk.org/) java implemenetation and [Maven](https://maven.apache.org/) for building and running the server
