@@ -8,7 +8,7 @@ echo
 echo Installing Prerequisites...
 
 sudo apt-get update -qq
-sudo apt-get install -y maven git git-lfs graphviz npm openjdk-11-jdk
+sudo apt-get install -y maven graphviz git-lfs npm openjdk-11-jdk
 
 echo DONE!
 echo 
@@ -29,9 +29,11 @@ echo Setting Neo4J default password and loading default database
 
 sudo neo4j-admin set-initial-password neo4j
 
-echo Retrieving code and creating git environment
+echo Retrieving files in LFS
 
 cd ..
+
+git lfs pull
 
 echo Building server
 
