@@ -10,6 +10,8 @@ VAIM application server is responsible for parsing the new graph files, interact
 
 ### Build
 
+Building and installation can be done automatically using the install script in the ```scripts``` folder located in the root of this repository or manually as follows.
+
 In the following, command line statements work interchangeably on both Windows and Linux unless explicitly stated otherwise. They also assume the working directory to be ```/path/to/VAIM/server```.
 
 Before building, modify the ```application.properties``` file to match your Neo4J configuration and GraphVIZ configuration. VAIM looks for the SFDP GraphVIZ function from the command line. The default is "sfdp", meaning that GraphVIZ is run from PATH.  These configurations are not necessary if you installed VAIM using the installation script.
@@ -22,7 +24,7 @@ mvn clean package -DskipTests
 
 It might take a few minutes, depending on the network speed and computer capabilities.
 
-The server will be packaged in the newly created "target" folder as "vaim-1.0.0.jar". 
+The server will be packaged in the newly created ```target``` folder as ```vaim-1.0.0.jar```. 
 
 ### Database restore (optional)
 
@@ -33,6 +35,8 @@ The available dumps can be restored to make use of the system right away. Otherw
 Please note that the existing database will be wiped out. You might want to dump the existing database for backup following the [official documentation](https://neo4j.com/docs/operations-manual/current/backup-restore/offline-backup/).
 
 ### Start-up
+
+Client can be started using the start script in the ```scripts``` folder located in the root of this repository or manually as follows.
 
 First, make sure that the Neo4J server is up and running.
 
