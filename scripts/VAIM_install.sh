@@ -31,21 +31,7 @@ sudo neo4j-admin set-initial-password neo4j
 
 echo Retrieving code and creating git environment
 
-DIR=$1
-
-if [ -z "$DIR" ]; then
-	DIR=$(pwd)
-fi
-
-if [ ! -d "$DIR" ]; then 
-	mkdir $DIR
-fi
-
-cd $DIR
-
-git clone https://github.com/EngAAlex/VAIM.git
-
-cd $DIR/VAIM
+cd ..
 
 echo Building server
 
@@ -59,8 +45,7 @@ sudo neo4j-admin load --database=neo4j --force --from="dumps/livedemodump.dump"
 
 echo Done! Installing client
 
-cd -
-cd client
+cd ../client
 
 npm install
 
