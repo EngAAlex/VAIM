@@ -1,18 +1,20 @@
 # VAIM Client source code
 
-This code is supplied as supplementary material for the TVCG paper submission "Influence Maximization with Visual Analytics". What follows is the README file of the client code.
-
 ## Requirements
 
-* npm for building 
+* [NPM](https://www.npmjs.com/) package manager for building 
 * VAIM server running
 
-## Install
+## Installation
 
-To build it, get into the root folder of the project and type the following:
+Installation can be done automatically with the install script in the ```scripts``` directory in the root of this repository or manually as follows.
+
+In the following, command line statements work interchangeably on both Windows and Linux unless explicitly stated otherwise. They also assume the working directory to be ```/path/to/VAIM/client```.
+
+To install, type the following:
 
 ```
-$ npm install 
+npm install 
 ```
 
 It might take a few minutes, depending on the network speed and computer capabilities.
@@ -22,14 +24,14 @@ It might take a few minutes, depending on the network speed and computer capabil
 To start the client in development mode, run the following:
 
 ```
-$ npm start
+npm start
 ```
 
-To build the client for deployment, first add the ``"homepage"`` directive onto ``package.json``. Afterwards, run ``npm build`` and then move the contents of the ``build`` folder onto the web server folder.
+To build the client for deployment, first add the ```homepage``` directive onto ```package.json``` (please refer to the [official documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)). Afterwards, run ```npm build``` and then move the contents of the ```build``` folder onto the web server folder.
 
 ### Configuration
 
-In case you changed the address of the server from the default, change it in ``utils/dataLoder.js`` on line 19:
+In case you want to build the client for deployment, change the server address in ``utils/dataLoder.js`` on line 19:
 
 ```
 const serverRoot = "http://localhost:8088/VAIM/";
