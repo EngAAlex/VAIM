@@ -4,13 +4,20 @@ VAIM application server is responsible for parsing the new graph files, interact
 
 ### Requirements
 
+* [GIT-LFS](https://git-lfs.github.com/) for downloading the large database dumps.
 * Maven and Java software (version >=11) 
 * Neo4J server running - please refer to the [official documentation](https://neo4j.com/docs/operations-manual/current/installation/) to do so
 * [GraphVIZ](https://graphviz.org/) library for creating layouts - optional.
 
 ### Build
 
+First, clone the repository using Git.
+
 Building and installation can be done automatically using the install script in the ```scripts``` folder located in the root of this repository or manually as follows.
+
+**First**, get into the repository root and run ```git lfs pull```
+
+If necessary, this will pull the larger files from the remote repository. At this point, switch to the server folder: ```cd server```
 
 In the following, command line statements work interchangeably on both Windows and Linux unless explicitly stated otherwise. They also assume the working directory to be ```/path/to/VAIM/server```.
 
