@@ -15,7 +15,7 @@ VAIM uses software that is available on all the three major operating systems, s
 * [GIT](https://git-scm.com/) and [GIT-LFS](https://git-lfs.github.com/) for downloading the code and data
 * [Neo4J](https://neo4j.com/) graph database
 * [NPM](https://www.npmjs.com/) javascript package manager for the client
-* [OpenJDK](https://openjdk.org/) java implemenetation and [Maven](https://maven.apache.org/) for building and running the server
+* [OpenJDK](https://openjdk.org/) java implemenetation (version 11 is preferable since is the one officially supported by Neo4J) and [Maven](https://maven.apache.org/) for building and running the server
 * [GraphViz](https://graphviz.org/) graph drawing library 
 
 System as been tested on __Windows 10 & 11__ and __Ubuntu 22.04__, but should be supported on Mac too. 
