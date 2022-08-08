@@ -6,7 +6,7 @@ VAIM application server is responsible for parsing the new graph files, interact
 
 * [GIT-LFS](https://git-lfs.github.com/) for downloading the large database dumps.
 * Maven and Java software (version >=11) 
-* Neo4J server running - please refer to the [official documentation](https://neo4j.com/docs/operations-manual/current/installation/) to do so. On Windows, VAIM is recommended with a portable Neo4J installation, using Neo4J console as a start command.
+* Neo4J server running - please refer to the [official documentation](https://neo4j.com/docs/operations-manual/current/installation/) to do so. On Windows, VAIM is recommended with a portable Neo4J installation, using ```Neo4J console``` as a start command.
 * [GraphVIZ](https://graphviz.org/) library for creating layouts - optional.
 
 ### Build
