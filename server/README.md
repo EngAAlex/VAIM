@@ -6,7 +6,7 @@ VAIM application server is responsible for parsing the new graph files, interact
 
 * [GIT-LFS](https://git-lfs.github.com/) for downloading the large database dumps.
 * Maven and Java software (version >=11) 
-* Neo4J server running - please refer to the [official documentation](https://neo4j.com/docs/operations-manual/current/installation/) to do so
+* Neo4J server running - please refer to the [official documentation](https://neo4j.com/docs/operations-manual/current/installation/) to do so. On Windows, VAIM is recommended with a portable Neo4J installation, using Neo4J console as a start command.
 * [GraphVIZ](https://graphviz.org/) library for creating layouts - optional.
 
 ### Build
@@ -39,7 +39,7 @@ The available dumps can be restored to make use of the system right away. Otherw
 
 ```neo4j-admin load --force --database=neo4j --from=dumps/livedemodump.dump```
 
-Please note that the existing database will be wiped out. You might want to dump the existing database for backup following the [official documentation](https://neo4j.com/docs/operations-manual/current/backup-restore/offline-backup/).
+Please note that the existing database will be wiped out. You might want to dump the existing database for backup following the [official documentation](https://neo4j.com/docs/operations-manual/current/backup-restore/offline-backup/). Dumps have been created with Neo4J 4.4.9 - use of database versions prior to this might lead the dumps to malfunction.
 
 ### Start-up
 
