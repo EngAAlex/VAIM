@@ -2,7 +2,7 @@
 
 ## Requirements
 
-* [NPM](https://www.npmjs.com/) package manager for building 
+* [NPM](https://www.npmjs.com/) package manager for building (on Windows, recommended portable installation or the use of a [Node version manager](https://npm.github.io/installation-setup-docs/installing/using-a-node-version-manager.html))
 * VAIM server running
 
 ## Installation
